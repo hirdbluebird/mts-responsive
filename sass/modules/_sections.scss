@@ -1,0 +1,87 @@
+.site-wrapper {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	height: 100vh;
+	& > * {
+		width: 100%;
+	}
+}
+.content-wrapper {
+	background: #eaeaea;
+	padding: 10px 0px;
+	text-align: center;
+	display: flex;
+	order: 2;
+	flex: 1 1 auto;
+	align-items: center;
+	& p {
+		margin: 0px;
+	}
+}
+.content {
+	margin: 0 auto;
+	width: 700px;
+	height: 50vh;
+	border-radius: 10px;
+	@include shadow-box( 0px 7px 15px 0px rgba(128,128,128,1) ); 
+	background-color: white;
+}
+.title {
+	margin: 0px;
+	line-height: 50px;
+	border-bottom: $border;
+	font-weight: 300;
+	display: block;
+}
+.main {
+	height: 15vh;
+	padding: 0px 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	& img {
+		margin-right: 5px;
+		height: 100%;
+	}
+}
+.login-wrapper {
+	text-align: center;
+	padding: 0px 30px;
+	height: 50%;
+	& > * {
+		display: block;
+	}
+	& h1 {
+		font-size: 3vh;
+	}
+}
+@media only screen and (max-width: 740px) {
+	.content-wrapper {
+	}
+	.content {
+		width: calc(100% - 40px);
+	}
+	.main h3 {
+		font-size: 2vh;
+	}
+}
+@media only screen and (max-height: 650px) {
+	.title {
+		font-size: 3vh;
+	}
+	.login-button {
+		line-height: 12vh;
+		font-size: 5vh;
+	}
+	.image-frame {
+		height: 70%;
+		width: auto;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.nav span {
+		display: none;
+	}
+}
